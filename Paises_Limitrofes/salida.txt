@@ -1,0 +1,21 @@
+// Variables Bivalentes
+dvar int+ Y1;
+dvar int+ Y2;
+dvar int+ Y3;
+dvar int+ Y4;
+dvar int+ Y5;
+dvar int+ Y6;
+
+// Objetivo
+minimize
+Y1 + Y2 + Y3 + Y4 + Y5 + Y6;
+
+// Modelo
+subject to {
+	Pais1: Y1 + Y2 + Y4 >= 1;
+	Pais2: Y2 + Y1 + Y3 + Y5 >= 1;
+	Pais3: Y3 + Y2 >= 1;
+	Pais4: Y4 + Y1 >= 1;
+	Pais5: Y5 + Y2 >= 1;
+	Pais6: Y6 >= 1;
+}
